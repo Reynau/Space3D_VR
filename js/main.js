@@ -54,16 +54,16 @@ function init() {
 
   for ( var i = 0; i < 10000; i ++ ) {
     var star = new THREE.Vector3();
-    star.x = THREE.Math.randFloatSpread( 2000 );
-    star.y = THREE.Math.randFloatSpread( 2000 );
-    star.z = THREE.Math.randFloatSpread( 2000 );
+    star.x = THREE.Math.randFloatSpread( 100 );
+    star.y = THREE.Math.randFloatSpread( 100 );
+    star.z = THREE.Math.randFloatSpread( 100 );
 
     starsGeometry.vertices.push( star );
   }
 
   var starsMaterial = new THREE.PointsMaterial({
     color: 0x888888,
-    size: 10,
+    size: 1,
     map: THREE.ImageUtils.loadTexture(
       "textures/flare-2.png"
     ),
